@@ -1,10 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 
 const generateId = require('./generateId');
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 const repositories = [];
 
 function logRequest(request, response, next){
